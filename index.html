@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116695302-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116695302-2');
+  </script>
+  <title>Travel Map</title>
+  <link rel="stylesheet" type="css" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Roboto|Playfair+Display" rel="stylesheet">
+  <script src="https://unpkg.com/sweetalert2@7.17.0/dist/sweetalert2.all.js"></script>
+</head>
+
+<body>
+  <div class="everything">
+    <div id="map"></div>
+    <script src="js/map.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZpBlsd7JwN86773LGZdiK4VO2tUt1x0&callback=initMap"></script>
+    <script async>
+    setTimeout(function() {
+      swal({
+        text: "Navigation on the bottom left!",
+        width: 300,
+      });
+    }, 400);
+    </script>
+    <div class="bottom">
+      <button type="button" id="all"> All </button>
+      <button type="button" id="clear"> Clear </button>
+      <button type="button" id="out"> Zoom Out </button>
+      <button type="button" id="home"> Home </button>
+      <button type="button" id="asiaButton"> Asia </button>
+      <button type="button" id="australiaButton"> Australia </button>
+      <button type="button" id="africaButton"> Africa </button>
+      <button type="button" id="europeButton"> Europe </button>
+      <button type="button" id="northAmericaButton"> North America </button>
+      <button type="button" id="southAmericaButton"> South America </button>
+    </div>
+  </div>
+</body>
+
+</html>
