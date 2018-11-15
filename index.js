@@ -205,12 +205,15 @@ function initMap() {
   }
 
   // all
-  document.getElementById("all").onclick = function() {
+  var all = function() {
     for (var country in cities) {
       addCountry(country);
     }
     map.setZoom(3);
   };
+  document.getElementById("all").onclick = all;
+  // People kept asking me if I've been in Berkeley my entire life
+  window.onload = all; 
 
   // clear
   document.getElementById("clear").onclick = function() {
